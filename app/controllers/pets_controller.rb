@@ -26,7 +26,8 @@ class PetsController < ApplicationController
   end
   
   get '/pets/:id/edit' do
-    @pet = Pet.find()
+    @pet = Pet.find(params[:id])
+    
   end
 
   patch '/pets/:id' do 
