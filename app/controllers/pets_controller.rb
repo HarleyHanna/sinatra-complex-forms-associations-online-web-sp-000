@@ -34,7 +34,8 @@ class PetsController < ApplicationController
 
   patch '/pets/:id' do 
     @pet = Pet.find(params[:id])
-    @pet.update(params["pet"])
+    @pet.update(params[:pet])
+    
     redirect to "pets/#{@pet.id}"
   end
 end
